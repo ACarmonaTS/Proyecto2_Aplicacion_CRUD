@@ -1,0 +1,54 @@
+/*Propiedades del documento en general*/
+*{
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*Propiedades principales del encabezado del sitio*/
+.encabezado{
+    width: 100%;
+    height: 4rem;
+    position: fixed;
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 85%, rgb(0, 0, 0));
+    display: flex;
+    align-items: center;
+}
+/*Eliminamos la decoración del link*/
+a{
+    text-decoration: none;
+}
+/*El titulo del encabezado se quedará del lado izquierdo*/
+#titlePage{
+    margin-left: 20px;
+}
+/*Propiedades del contenedor de la lista*/
+#listaHeader{
+    width: 60%;
+    justify-content: space-between;
+    margin-left: auto;
+    display:flex;
+    padding: 0;
+}
+/*Comportamiento de los elementos de la lista al pasar el mouse*/
+#listaHeader a:hover{
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 85%, rgb(1, 4, 46));
+}
+/*Propiedades de los elementos de la lista*/
+li{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-size: 18px;
+    font-weight: bolder;
+    border-left: 1px solid;
+}
+/*Tamaño de las imagenes del encabezado*/
+header img{
+    width: 18px;
+}
+/*Tamaño de las imagenes de las opciones del encabezado*/
+#opciones img{
+    width: 36px;
+    display: none !important;
+    visibility: hidden !important;
+}
