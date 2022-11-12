@@ -18,9 +18,7 @@ a{
     color: black;
 }
 /*El titulo del encabezado se quedará del lado izquierdo*/
-#titlePage{
-    margin-left: 20px;
-}
+#titlePage{ margin-left: 20px; }
 /*Propiedades del contenedor de la lista*/
 #listaHeader{
     width: 60%;
@@ -30,23 +28,18 @@ a{
     padding: 0;
 }
 /*Comportamiento de los elementos de la lista al pasar el mouse*/
-#listaHeader a:hover{
-    color: brown;
-}
+#listaHeader a:hover{ color: brown; }
 /*Propiedades de los elementos de la lista*/
 li{
     width: 100%;
     display: flex;
     justify-content: center;
     list-style: none;
-    font-size: 18px;
-    font-weight: bolder;
+    font:  bold 20px bold;
     border-left: 1px solid;
 }
 /*Tamaño de las imagenes del encabezado*/
-header img{
-    width: 18px;
-}
+header img{ width: 18px; }
 /*Tamaño de las imagenes de las opciones del encabezado*/
 #opciones img{
     width: 36px;
