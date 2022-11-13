@@ -3,6 +3,7 @@
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+/* ====================================== HEADER ====================================== */
 /*Propiedades principales del encabezado del sitio*/
 .encabezado{
     width: 100%;
@@ -13,15 +14,12 @@
     align-items: center;
 }
 /*Eliminamos la decoración del link*/
-a{
-    text-decoration: none;
-    color: black;
-}
+a{ text-decoration: none; color: black; }
 /*El titulo del encabezado se quedará del lado izquierdo*/
-#titlePage{ margin-left: 20px; }
+#titlePage{ margin-left: 15px; }
 /*Propiedades del contenedor de la lista*/
 #listaHeader{
-    width: 60%;
+    width: 85%;
     justify-content: space-between;
     margin-left: auto;
     display:flex;
@@ -35,8 +33,8 @@ li{
     display: flex;
     justify-content: center;
     list-style: none;
-    font:  bold 20px bold;
-    border-left: 1px solid;
+    font:  bold 18px bold;
+    border-left: 2px solid;
 }
 /*Tamaño de las imagenes del encabezado*/
 header img{ width: 18px; }
@@ -46,3 +44,32 @@ header img{ width: 18px; }
     display: none !important; /*display: flex; /*Para que desaparezca el area que ocupa*/
     visibility: hidden !important; /*visibility: visible; /*Para que se haga invisible*/
 }
+/* ====================================== CONTENIDO ====================================== */
+/*Contenedor principal*/
+.contenedor{ display: grid; grid-template-columns: 15% 85%; }
+/*Contenedor de sub titulo*/
+#subPanel{ grid-column: 1/2; background-color: black; display: flex; justify-content: center; }
+/*Características del sub titulo*/
+#subPanel p{
+    color: white;
+    font: bolder 50px bolder;
+    transform: rotate(270deg);
+    position: fixed;
+    top: 40%;
+}
+/*Contenedor del contenido*/
+main{
+    grid-column: 2/3;
+    background-color: beige;
+}
+/* ====================================== CONTENIDO ====================================== */
+/*Características del contenedor del footer*/
+.downFooter{ 
+    bottom: 0; 
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(255, 255, 255) 15%); 
+    font: bolder 20px bolder;
+}
+/*Texto de soporte técnico*/
+footer p{ text-align: center; width: 70%; }
+/*Opciones adicionales*/
+#download{ color: rgb(57, 156, 12); }

@@ -3,6 +3,7 @@
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+/* ====================================== HEADER ====================================== */
 /*Propiedades principales del encabezado del sitio*/
 .encabezado{
     width: 100%;
@@ -12,6 +13,7 @@
     background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(255, 255, 255) 15%);
     display: flex;
     align-items: center;
+    z-index: 1;
 }
 /*Eliminamos la decoración del link*/
 a{ text-decoration: none; color: black; }
@@ -19,6 +21,7 @@ a{ text-decoration: none; color: black; }
 #titlePage{ margin-left: 10px; font-size: 28px; }
 /*Propiedades del contenedor de la lista*/
 #listaHeader{
+    background-color: white;
     position: absolute;
     bottom: calc(100%);
     width: 100%;
@@ -31,16 +34,9 @@ a{ text-decoration: none; color: black; }
     transition: 800ms;
 }
 /*Comportamiento de los elementos de la lista al pasar el mouse*/
-#listaHeader a:hover{ color: brown; border-bottom: 2px solid brown;}
+#listaHeader a:hover{ color: brown; border-bottom: 2px solid brown; }
 /*Propiedades de los elementos de la lista*/
-li{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    font:  bold 20px bold;
-    border-left: 1px solid;
-}
+li{ width: 100%; display: flex; justify-content: center; list-style: none; font:  bold 20px bold; }
 /*Tamaño de las imagenes del encabezado*/
 header img{ width: 18px; }
 /*Tamaño de las imagenes de las opciones del encabezado*/
@@ -53,6 +49,34 @@ header img{ width: 18px; }
     visibility: visible; /*visibility: hidden !important; /*Para que se haga invisible*/
 }
 /*Características de las imagens de opciones de menu*/
-#opciones img{
-    width: 100%;
+#opciones img{ width: 100%; }
+/* ====================================== CONTENIDO ====================================== */
+/*Contenedor principal*/
+.contenedor{ display: flex; flex-direction: column; }
+/*Contenedor de sub titulo*/
+#subPanel{ width: 100%; height: 6rem; background-color: black; position: fixed; top: 0; }
+/*Características del sub titulo*/
+#subPanel p{ color: white; font: bolder 40px bolder; text-align: center; }
+/*Contenedor del contenido*/
+main{
+    background-color: beige;
+}
+/* ====================================== FOOTER ====================================== */
+/*Características del contenedor del footer*/
+.downFooter{
+    position: relative;
+    bottom: 4rem;
+    z-index: 0;
+    display: flex; 
+    justify-content: center;
+    font: bolder 20px bolder;
+}
+/*Texto de soporte técnico*/
+footer p{ 
+    display: flex; 
+    justify-content: center;
+    align-items: center 
+    ;width: 100%; 
+    height: 100%; 
+    background-color: black; color: white;
 }
