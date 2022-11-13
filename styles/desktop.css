@@ -43,6 +43,6 @@ header img{ width: 18px; }
 /*Tamaño de las imagenes de las opciones del encabezado*/
 #opciones img{
     width: 36px;
-    display: none !important;
-    visibility: hidden !important;
+    display: none !important; /*display: flex; /*Para que desaparezca el area que ocupa*/
+    visibility: hidden !important; /*visibility: visible; /*Para que se haga invisible*/
 }

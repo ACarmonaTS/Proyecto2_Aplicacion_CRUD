@@ -28,6 +28,7 @@ a{ text-decoration: none; color: black; }
     padding: 0;
     border-top: 2px solid black;
     visibility: hidden !important; /*Para que se haga invisible /*visibility: visible;*/
+    transition: 800ms;
 }
 /*Comportamiento de los elementos de la lista al pasar el mouse*/
 #listaHeader a:hover{ color: brown; border-bottom: 2px solid brown;}
