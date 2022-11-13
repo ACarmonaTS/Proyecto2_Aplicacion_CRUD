@@ -29,23 +29,44 @@
     <div class="contenedor">
         <div id="subPanel"><p>INVENTARIO<br>GENERAL</p></div>
         <main>
-            <br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br>
-            --------------------------------------------------------<br>-----------------------------------------------------------------
-            <br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br>
+            <div class="contForm add">
+                <form action="">
+                    <fieldset id="datosAdd">
+                        <legend>&nbsp;AGREGAR&nbsp;</legend>
+                        <input type="text" id="ctaInput" name="name" value="Nombre del producto" maxlength="80"><br>
+                        <input type="text" id="ctaInput" name="id" value="Clave del producto" maxlength="80"><br>
+                        <div class="numbersP">
+                            <label for="ctaInput" class="descInput">Número de piezas&nbsp;</label>
+                            <input type="number" id="ctaInput" name="numP" value=0 maxlength="80"><br>
+                        </div><br>
+                        <label for="ctaInput" class="descInput">Descripción</label><br>
+                        <textarea id="ctaInput" name="descAdd" rows="12"></textarea>
+                    </fieldset>
+                    <div class="contBtn">
+                        <button type="button">AGREGAR</button>
+                        <button type="button">LIMPIAR</button>
+                    </div>
+                </form>
+            </div>
+            <div class="contForm search">
+                <form action="">
+                    <fieldset id="datosAdd">
+                        <legend>&nbsp;BUSCAR&nbsp;</legend>
+                        <input type="text" id="ctaInput" name="name" value="Nombre del producto" maxlength="80"><br>
+                        <input type="text" id="ctaInput" name="id" value="Clave del producto" maxlength="80"><br>
+                        <div class="numbersP">
+                            <label for="ctaInput" class="descInput">Número de piezas&nbsp;</label>
+                            <input type="number" id="ctaInput" name="numP" value=0 maxlength="80"><br>
+                        </div><br>
+                        <label for="ctaInput" class="descInput">Descripción</label><br>
+                        <textarea id="ctaInput" name="descAdd" rows="12"></textarea>
+                    </fieldset>
+                    <div class="contBtn">
+                        <button type="button">AGREGAR</button>
+                        <button type="button">LIMPIAR</button>
+                    </div>
+                </form>
+            </div>
         </main>
     </div>
     <footer class="encabezado downFooter">

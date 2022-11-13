@@ -40,7 +40,7 @@ header img{ width: 18px; }
 }
 /* ====================================== CONTENIDO ====================================== */
 /*Contenedor principal*/
-.contenedor{ display: grid; grid-template-columns: 15% 85%; }
+.contenedor{ height: 60rem; display: grid; grid-template-columns: 15% 85%; }
 /*Contenedor de sub titulo*/
 #subPanel{ grid-column: 1/2; background-color: black; display: flex; justify-content: center; }
 /*Características del sub titulo*/
@@ -52,11 +52,86 @@ header img{ width: 18px; }
     top: 40%;
 }
 /*Contenedor del contenido*/
-main{
-    grid-column: 2/3;
-    background-color: beige;
+main{ display: flex; grid-column: 2/3; background-color: beige; }
+/*Contenedor de los secciones CRUD*/
+.contForm{
+    margin: auto;
+    width: 90%;
+    height: 70%;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border: 5px ridge black;
+    border-radius: 1rem;
 }
-/* ====================================== CONTENIDO ====================================== */
+/*Contenedor del formulario*/
+form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Contenedor de los datos del formulario*/
+fieldset{
+    width: 90%;
+    height: 80%;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid black;
+    border-radius: 1rem;
+    text-align: center;
+    font: bolder 15px bolder;
+}
+/*Leyenda del contenedor de los datos del formulario*/
+legend{ font-size: 30px; background-color: rgb(0, 0, 0); color: white; border-radius: 10px;}
+/*Características de los label*/
+label{ font: bolder 24px bolder; }
+/*Características de los inputs del formulario*/
+input{ width: 80%; height: 30px; font-size: 18px; }
+/*Contenedor de la sección de número de piezas*/
+.numbersP{ width: 80%; display: flex; justify-content: space-between; }
+/*Cracterísticas de los label de la sección de número de piezas*/
+.numbersP label{
+    width: 20%;
+    font-size: 140%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Características de los input de la sección de número de piezas*/
+.numbersP input{ width: 80%; }
+/*Características del textarea de descripción del producto*/
+textarea{ width: 78%; font-size: 20px; padding: 0px 10px; resize: none; }
+/*Contenedor de los botones*/
+.contBtn{ margin: auto; width: 90%; height: 15%; display: flex; justify-content: center; }
+/*Características de los botones*/
+.contBtn button{
+    width: 8rem;
+    height: 3rem;
+    font: bolder 20px bolder;
+    margin: auto 20px;
+    color: white;
+    background-color: black;
+    border-radius: 1rem;
+}
+/*Características de los botones al pasar el mouse*/
+.contBtn button:hover{ color: black; background-color: white; }
+/* ----------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------- */
+                        /*VISIVILIDAD DE LOS CONTENEDORES CRUD*/
+    .add{ display: none; }
+    .search{ display: block; }
+    .edit{ display: none; }
+    .delete{ display: none; }
+    .file{ display: none; }
+/* ----------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------- */
+/* ====================================== FOOTER ====================================== */
 /*Características del contenedor del footer*/
 .downFooter{ 
     bottom: 0; 
