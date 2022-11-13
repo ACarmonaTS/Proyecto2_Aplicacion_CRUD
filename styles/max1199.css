@@ -1,0 +1,57 @@
+/*Propiedades del documento en general*/
+*{
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*Propiedades principales del encabezado del sitio*/
+.encabezado{
+    width: 100%;
+    height: 4rem;
+    position: fixed;
+    top: calc(100% - 4rem);
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(255, 255, 255) 15%);
+    display: flex;
+    align-items: center;
+}
+/*Eliminamos la decoración del link*/
+a{ text-decoration: none; color: black; }
+/*El titulo del encabezado se quedará del lado izquierdo*/
+#titlePage{ margin-left: 10px; font-size: 28px; }
+/*Propiedades del contenedor de la lista*/
+#listaHeader{
+    position: absolute;
+    bottom: calc(100%);
+    width: 100%;
+    height: 15rem;
+    display: grid;
+    align-items: center;
+    padding: 0;
+    border-top: 2px solid black;
+    visibility: hidden !important; /*Para que se haga invisible /*visibility: visible;*/
+}
+/*Comportamiento de los elementos de la lista al pasar el mouse*/
+#listaHeader a:hover{ color: brown; border-bottom: 2px solid brown;}
+/*Propiedades de los elementos de la lista*/
+li{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font:  bold 20px bold;
+    border-left: 1px solid;
+}
+/*Tamaño de las imagenes del encabezado*/
+header img{ width: 18px; }
+/*Tamaño de las imagenes de las opciones del encabezado*/
+#opciones{
+    position: fixed;
+    right: 20px;
+    width: 80px;
+    align-items: center;
+    display: flex; /*display: none !important; /*Para que desaparezca el area que ocupa*/
+    visibility: visible; /*visibility: hidden !important; /*Para que se haga invisible*/
+}
+/*Características de las imagens de opciones de menu*/
+#opciones img{
+    width: 100%;
+}
