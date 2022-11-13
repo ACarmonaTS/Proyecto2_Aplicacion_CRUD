@@ -30,9 +30,10 @@ a{ text-decoration: none; color: black; }
     align-items: center;
     padding: 0;
     border-top: 2px solid black;
-    visibility: hidden !important; /*Para que se haga invisible /*visibility: visible;*/
-    transition: 800ms;
+    visibility: hidden; /*Para que se haga invisible*/
 }
+/*Comportamiento de los elementos de la lista*/
+#listaHeader a{ color: black; margin: 8px auto;}
 /*Comportamiento de los elementos de la lista al pasar el mouse*/
 #listaHeader a:hover{ color: brown; border-bottom: 2px solid brown; }
 /*Propiedades de los elementos de la lista*/
@@ -40,14 +41,11 @@ li{ width: 100%; display: flex; justify-content: center; list-style: none; font:
 /*Tamaño de las imagenes del encabezado*/
 header img{ width: 18px; }
 /*Tamaño de las imagenes de las opciones del encabezado*/
-#opciones{
-    position: fixed;
-    right: 20px;
-    width: 80px;
-    align-items: center;
-    display: flex; /*display: none !important; /*Para que desaparezca el area que ocupa*/
-    visibility: visible; /*visibility: hidden !important; /*Para que se haga invisible*/
-}
+#opciones{ position: fixed; right: 20px; width: 40px; }
+/*Ver solo el ícono opciones desde el principio*/
+#opc{ display: block; }
+/*Dejar invisible el ícono "cancelar" desde el princi*/
+#cancel{ display: none; }
 /*Características de las imagens de opciones de menu*/
 #opciones img{ width: 100%; }
 /* ====================================== CONTENIDO ====================================== */
