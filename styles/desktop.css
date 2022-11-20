@@ -83,8 +83,12 @@ legend{ font-size: 30px; margin-bottom: 20px; }
 label{ font: bolder 24px bolder; }
 /*Características de los inputs del formulario*/
 input{ width: 90%; height: 30px; font-size: 18px; margin-bottom: 10px; text-align: center;}
+/*Contenedor de la descripción del producto*/
+#contDesc{ width: 98%; height: 40%; margin: auto auto 0 auto; }
+/*Label de DESCRIPCIÓN del textarea*/
+.descText{ margin: 35px auto 10px auto; }
 /*Características del textarea de descripción del producto*/
-textarea{ width: 96%; height: 30%; font-size: 20px; padding: 0px 10px; resize: none; }
+textarea{ margin: 20px auto 10px auto; width: 96%; height: 80%; font-size: 20px; padding: 0px 10px; resize: none; }
 /*Contenedor de los botones*/
 .contBtn{ margin: auto; width: 90%; height: 15%; display: flex; justify-content: center; }
 /*Características de los botones*/
