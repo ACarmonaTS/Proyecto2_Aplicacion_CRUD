@@ -24,3 +24,12 @@ window.onresize = function() {
         document.getElementById('opc').style.display = "block";
     }
 };
+/*Función para la visibilidad de las secciones CRUD*/
+function seccionCrud( opcion ){
+    document.getElementById('addV').style.display = "none";
+    document.getElementById('searchV').style.display = "none";
+    document.getElementById('deleteV').style.display = "none";
+    document.getElementById('editV').style.display = "none";
+    document.getElementById('readV').style.display = "none";
+    document.getElementById(opcion).style.display = "block";
+}

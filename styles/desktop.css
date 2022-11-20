@@ -14,7 +14,7 @@
     align-items: center;
 }
 /*Eliminamos la decoración del link*/
-a{ text-decoration: none; color: black; }
+a{ text-decoration: none; color: black; cursor: pointer; }
 /*El titulo del encabezado se quedará del lado izquierdo*/
 #titlePage{ margin-left: 15px; }
 /*Propiedades del contenedor de la lista*/
@@ -102,15 +102,17 @@ textarea{ margin: 20px auto 10px auto; width: 96%; height: 80%; font-size: 20px;
 }
 /*Características de los botones al pasar el mouse*/
 .btnStyle1:hover{ color: black; background-color: white; }
+/*Inputs de la sección buscar*/
+.searchInput{ background-color: rgb(211, 211, 211); } 
 /* ----------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------- */
                         /*VISIVILIDAD DE LOS CONTENEDORES CRUD*/
-    .add{ display: block; }
-    .search{ display: none; }
-    .edit{ display: none; }
-    .delete{ display: none; }
-    .file{ display: none; }
+    #addV{ display: block; }
+    #searchV{ display: none; }
+    #editV{ display: none; }
+    #deleteV{ display: none; }
+    #readV{ display: none; }
 /* ----------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------- */

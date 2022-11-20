@@ -14,11 +14,11 @@
     <header class="encabezado">
         <a href="index.html"><h1 id="titlePage">DEVENDRA&nbsp;</h1></a>
         <ul id="listaHeader">
-            <li id="add"><a href=""><img src="assets/00 agregar.gif" alt="AGREGAR">&nbsp;AGREGAR</a></li>
-            <li id="search"><a href=""><img src="assets/00 buscar.gif" alt="AGREGAR">&nbsp;BUSCAR</a></li>
-            <li id="edit"><a href=""><img src="assets/00 editar.gif" alt="AGREGAR">&nbsp;EDITAR</a></li>
-            <li id="delete"><a href=""><img src="assets/00 eliminar.gif" alt="AGREGAR">&nbsp;ELIMINAR</a></li>
-            <li id="file"><a href=""><img src="assets/00 archivo.gif" alt="AGREGAR">&nbsp;ARCHIVO</a></li>
+            <li id="add" onclick="seccionCrud('addV');"><a><img src="assets/00 agregar.gif" alt="AGREGAR">&nbsp;AGREGAR</a></li>
+            <li id="search" onclick="seccionCrud('searchV');"><a><img src="assets/00 buscar.gif" alt="AGREGAR">&nbsp;BUSCAR</a></li>
+            <li id="edit" onclick="seccionCrud('editV');"><a><img src="assets/00 editar.gif" alt="AGREGAR">&nbsp;EDITAR</a></li>
+            <li id="delete" onclick="seccionCrud('deleteV');"><a><img src="assets/00 eliminar.gif" alt="AGREGAR">&nbsp;ELIMINAR</a></li>
+            <li id="read" onclick="seccionCrud('readV');"><a><img src="assets/00 archivo.gif" alt="AGREGAR">&nbsp;ARCHIVO</a></li>
             <!--<li id="cSesion"><a href="">CERRAR SESIÓN</a></li>-->
         </ul>
          <div id="opciones">
@@ -29,7 +29,7 @@
     <div class="contenedor">
         <div id="subPanel"><p>INVENTARIO<br>GENERAL</p></div>
         <main>
-            <div class="contForm add">
+            <div class="contForm" id="addV">
                 <form action="">
                     <fieldset id="datosAdd">
                         <legend>&nbsp;AGREGAR&nbsp;</legend>
@@ -45,7 +45,7 @@
                                     <input type="text" id="ctaInput" name="claveProdAdd" value="" maxlength="25" autocomplete="off">
                                 </label>
                                 <label for="ctaInput" class="descInput">Identificador&nbsp;
-                                    <input type="text" id="ctaInput" name="identAdd" value=0 maxlength="25" autocomplete="off">
+                                    <input class="searchInput" type="text" id="ctaInput" name="identAdd" value="" maxlength="25" autocomplete="off" readonly="readonly">
                                 </label>
                             </div>
                             <div>
@@ -59,7 +59,7 @@
                                     <input type="number" id="ctaInput" name="ventaAdd" value=0 maxlength="10">
                                 </label>
                                 <label for="ctaInput" class="descInput">Ganancia&nbsp;
-                                    <input type="number" id="ctaInput" name="gananciaAdd" value=0 maxlength="10" autocomplete="off">
+                                    <input class="searchInput" type="number" id="ctaInput" name="gananciaAdd" value=0 maxlength="10" autocomplete="off">
                                 </label>
                             </div>
                         </div><br>
@@ -73,6 +73,156 @@
                         <button class="btnStyle1" type="button">LIMPIAR</button>
                     </div>
                 </form>
+            </div>
+            <div class="contForm" id="searchV">
+                <form action="">
+                    <fieldset id="datosAdd">
+                        <legend>&nbsp;BUSCAR&nbsp;</legend>
+                        <div class="datosAdd">
+                            <div>
+                                <label for="ctaInput" class="descInput">Identificador&nbsp;
+                                    <input type="text" id="ctaInput" name="identAdd" value="" maxlength="25" autocomplete="off">
+                                </label>
+                                <label for="ctaInput" class="descInput">Nombre&nbsp;
+                                    <input class="searchInput" type="text" id="ctaInput" name="nameAdd" value="" maxlength="25" autocomplete="off" readonly="readonly">
+                                </label>
+                                <label for="ctaInput" class="descInput">Caterogía&nbsp;
+                                    <input class="searchInput" type="text" id="ctaInput" name="catAdd" value="" maxlength="25" autocomplete="off" readonly="readonly">
+                                </label>
+                                <label for="ctaInput" class="descInput">Clave del producto&nbsp;
+                                    <input class="searchInput" type="text" id="ctaInput" name="claveProdAdd" value="" maxlength="25" autocomplete="off" readonly="readonly">
+                                </label>
+                            </div>
+                            <div>
+                                <label for="ctaInput" class="descInput">Stock&nbsp;
+                                    <input class="searchInput" type="number" id="ctaInput" name="stockAdd" value=0 maxlength="10" readonly="readonly">
+                                </label>
+                                <label for="ctaInput" class="descInput">Precio de compra&nbsp;
+                                    <input class="searchInput" type="number" id="ctaInput" name="compraAdd" value=0 maxlength="10" readonly="readonly">
+                                </label>
+                                <label for="ctaInput" class="descInput">Precio de venta&nbsp;
+                                    <input class="searchInput" type="number" id="ctaInput" name="ventaAdd" value=0 maxlength="10" readonly="readonly">
+                                </label>
+                                <label for="ctaInput" class="descInput">Ganancia&nbsp;
+                                    <input class="searchInput" type="number" id="ctaInput" name="gananciaAdd" value=0 maxlength="10" autocomplete="off" readonly="readonly">
+                                </label>
+                            </div>
+                        </div><br>
+                        <div id="contDesc">
+                            <label for="ctaInput" class="descInput descText">Descripción</label><br>
+                            <textarea class="searchInput"  id="ctaInput" name="descAdd" rows="12" readonly="readonly"></textarea>
+                        </div>
+                    </fieldset>
+                    <div class="contBtn">
+                        <button class="btnStyle1" type="button">BUSCAR</button>
+                        <button class="btnStyle1" type="button">LIMPIAR</button>
+                    </div>
+                </form>
+            </div>
+            <div class="contForm" id="editV">
+                <form action="">
+                    <fieldset id="datosAdd">
+                        <legend>&nbsp;EDITAR&nbsp;</legend>
+                        <div class="datosAdd">
+                            <div>
+                                <label for="ctaInput" class="descInput">Identificador&nbsp;
+                                    <input type="text" id="ctaInput" name="identAdd" value="" maxlength="25" autocomplete="off">
+                                </label>
+                                <label for="ctaInput" class="descInput">Nombre&nbsp;
+                                    <input class="searchInput" type="text" id="ctaInput" name="nameAdd" value="" maxlength="25" autocomplete="off" readonly="readonly">
+                                </label>
+                                <label for="ctaInput" class="descInput">Caterogía&nbsp;
+                                    <input type="text" id="ctaInput" name="catAdd" value="" maxlength="25" autocomplete="off" readonly="readonly">
+                                </label>
+                                <label for="ctaInput" class="descInput">Clave del producto&nbsp;
+                                    <input class="searchInput" type="text" id="ctaInput" name="claveProdAdd" value="" maxlength="25" autocomplete="off" readonly="readonly">
+                                </label>
+                            </div>
+                            <div>
+                                <label for="ctaInput" class="descInput">Stock&nbsp;
+                                    <input type="number" id="ctaInput" name="stockAdd" value=0 maxlength="10" readonly="readonly">
+                                </label>
+                                <label for="ctaInput" class="descInput">Precio de compra&nbsp;
+                                    <input type="number" id="ctaInput" name="compraAdd" value=0 maxlength="10" readonly="readonly">
+                                </label>
+                                <label for="ctaInput" class="descInput">Precio de venta&nbsp;
+                                    <input type="number" id="ctaInput" name="ventaAdd" value=0 maxlength="10" readonly="readonly">
+                                </label>
+                                <label for="ctaInput" class="descInput">Ganancia&nbsp;
+                                    <input class="searchInput" type="number" id="ctaInput" name="gananciaAdd" value=0 maxlength="10" autocomplete="off" readonly="readonly">
+                                </label>
+                            </div>
+                        </div><br>
+                        <div id="contDesc">
+                            <label for="ctaInput" class="descInput descText">Descripción</label><br>
+                            <textarea id="ctaInput" name="descAdd" rows="12" readonly="readonly"></textarea>
+                        </div>
+                    </fieldset>
+                    <div class="contBtn">
+                        <button class="btnStyle1" type="button">EDITAR</button>
+                        <button class="btnStyle1" type="button">LIMPIAR</button>
+                    </div>
+                </form>
+            </div>
+            <div class="contForm" id="deleteV">
+                <form action="">
+                    <fieldset id="datosAdd">
+                        <legend>&nbsp;ELIMINAR&nbsp;</legend>
+                        <div class="datosAdd">
+                            <div>
+                                <label for="ctaInput" class="descInput">Identificador&nbsp;
+                                    <input type="text" id="ctaInput" name="identAdd" value="" maxlength="25" autocomplete="off">
+                                </label>
+                                <label for="ctaInput" class="descInput">Nombre&nbsp;
+                                    <input class="searchInput" type="text" id="ctaInput" name="nameAdd" value="" maxlength="25" autocomplete="off" readonly="readonly">
+                                </label>
+                                <label for="ctaInput" class="descInput">Caterogía&nbsp;
+                                    <input class="searchInput" type="text" id="ctaInput" name="catAdd" value="" maxlength="25" autocomplete="off" readonly="readonly">
+                                </label>
+                                <label for="ctaInput" class="descInput">Clave del producto&nbsp;
+                                    <input class="searchInput" type="text" id="ctaInput" name="claveProdAdd" value="" maxlength="25" autocomplete="off" readonly="readonly">
+                                </label>
+                            </div>
+                            <div>
+                                <label for="ctaInput" class="descInput">Stock&nbsp;
+                                    <input class="searchInput" type="number" id="ctaInput" name="stockAdd" value=0 maxlength="10" readonly="readonly">
+                                </label>
+                                <label for="ctaInput" class="descInput">Precio de compra&nbsp;
+                                    <input class="searchInput" type="number" id="ctaInput" name="compraAdd" value=0 maxlength="10" readonly="readonly">
+                                </label>
+                                <label for="ctaInput" class="descInput">Precio de venta&nbsp;
+                                    <input class="searchInput" type="number" id="ctaInput" name="ventaAdd" value=0 maxlength="10" readonly="readonly">
+                                </label>
+                                <label for="ctaInput" class="descInput">Ganancia&nbsp;
+                                    <input class="searchInput" type="number" id="ctaInput" name="gananciaAdd" value=0 maxlength="10" autocomplete="off" readonly="readonly">
+                                </label>
+                            </div>
+                        </div><br>
+                        <div id="contDesc">
+                            <label for="ctaInput" class="descInput descText">Descripción</label><br>
+                            <textarea class="searchInput"  id="ctaInput" name="descAdd" rows="12" readonly="readonly"></textarea>
+                        </div>
+                    </fieldset>
+                    <div class="contBtn">
+                        <button class="btnStyle1" type="button">ELIMINAR</button>
+                        <button class="btnStyle1" type="button">LIMPIAR</button>
+                    </div>
+                </form>
+            </div>
+            <div class="contForm" id="readV">
+                <table id="tRead">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Stock</th>
+                            <th>Precio<br>Venta</th>
+                            <th>Precio<br>Compra</th>
+                            <th>Ganancia</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
             </div>
         </main>
     </div>
