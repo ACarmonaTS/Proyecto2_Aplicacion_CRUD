@@ -32,4 +32,5 @@ function seccionCrud( opcion ){
     document.getElementById('editV').style.display = "none";
     document.getElementById('readV').style.display = "none";
     document.getElementById(opcion).style.display = "block";
+    if(window.innerWidth<=1199){ opciones(); }
 }

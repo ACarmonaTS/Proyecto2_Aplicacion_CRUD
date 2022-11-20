@@ -110,11 +110,11 @@ textarea{ width: 50%; height: 10%; font-size: 20px; padding: 0px 10px; resize: n
 /* ----------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------- */
                         /*VISIVILIDAD DE LOS CONTENEDORES CRUD*/
-    .add{ display: block; }
-    .search{ display: none; }
-    .edit{ display: none; }
-    .delete{ display: none; }
-    .file{ display: none; }
+    .addV{ display: block; }
+    .searchV{ display: none; }
+    .editV{ display: none; }
+    .deleteV{ display: none; }
+    .fileV{ display: none; }
 /* ----------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------- */
