@@ -104,6 +104,14 @@ textarea{ margin: 20px auto 10px auto; width: 96%; height: 80%; font-size: 20px;
 .btnStyle1:hover{ color: black; background-color: white; }
 /*Inputs de la sección buscar*/
 .searchInput{ background-color: rgb(211, 211, 211); } 
+/*Contenedor de la tabla*/
+.tableData{ width: 90%; height: 50rem; margin: 6rem auto 10rem auto; }
+/*Características de la tabla*/
+table{ width: 90%; height: 90%; margin: auto; }
+/*Características del encabezado de la tabla*/
+thead{ width: 100%; background-color: rgb(0, 0, 0); color: white; }
+/*Columnas*/
+th{ width: 16.5%; border-bottom: 2px solid rgb(0, 0, 0); }
 /* ----------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------- */

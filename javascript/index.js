@@ -27,4 +27,37 @@ function seccionCrud( opcion ){
     document.getElementById('readV').style.display = "none";
     document.getElementById(opcion).style.display = "block";
     if(window.innerWidth<=1199){ opciones(); }
+    if( opcion == "readV"){ mostrar(); }
+}
+/*=====================================================================*/
+/*=====================================================================*/
+/*                        FUNCIONES CRUD                               */
+/*=====================================================================*/
+/*=====================================================================*/
+/* Variables */
+let lista = []; nombre = document.querySelector("[name='nameAdd']").value;
+let cont = 0;
+
+/* Función para agregar */
+function agregar(){
+    const nombre = document.querySelector("[name='nameAdd']").value;
+    const categoria = document.querySelector("[name='catAdd']").value;
+    const clave = document.querySelector("[name='nameAdd']").value;
+    const stock = document.querySelector("[name='nameAdd']").value;
+    const venta = document.querySelector("[name='nameAdd']").value;
+    const compra = document.querySelector("[name='nameAdd']").value;
+    const nombreId = nombre.charAt(0);
+    const idMaterial = nombreId + apellido + cont;
+    const contactos = {
+        id: idMaterial,
+        nombre,
+        apellido,
+        telefono,
+    };
+    agenda.push(contactos);
+    cont++;
+    document.getElementById("nombres").value = "";
+    document.getElementById("apellidos").value = "";
+    document.getElementById("telefonos").value = "";
+    document.getElementById("codigo").innerHTML = JSON.stringify(agenda, null, 3);
 }

@@ -106,15 +106,23 @@ textarea{ width: 50%; height: 90%; font-size: 20px; padding: 0px 10px; resize: n
 }
 /*Características de los botones al pasar el mouse*/
 .btnStyle1:hover{ color: black; background-color: white; }
+/*Contenedor de la tabla*/
+.tableData{ width: 100%; height: 50rem; margin: 10rem auto 5rem auto; }
+/*Características de la tabla*/
+table{ width: 100%; height: 90%; margin: auto; }
+/*Características del encabezado de la tabla*/
+thead{ width: 100%; background-color: rgb(0, 0, 0); color: white; }
+/*Columnas*/
+th{ width: 16.5%; border-bottom: 2px solid rgb(0, 0, 0); }
 /* ----------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------- */
                         /*VISIVILIDAD DE LOS CONTENEDORES CRUD*/
-    #addV{ display: block; }
+    #addV{ display: none; }
     #searchV{ display: none; }
     #editV{ display: none; }
     #deleteV{ display: none; }
-    #readV{ display: none; }
+    #readV{ display: block; }
 /* ----------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------- */
