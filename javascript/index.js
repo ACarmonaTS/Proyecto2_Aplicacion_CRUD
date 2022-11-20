@@ -15,14 +15,8 @@ function opciones(){
 /*Esta función detecta el cambio de tamaño de anchura del navegador, de esta forma establecemos 
 la visibilidad del menú de opciones, el botón de "cancelar" y el de "opciones"*/
 window.onresize = function() {
-    if(window.innerWidth>=1200){ 
-        document.getElementById('listaHeader').style.visibility = "visible";
-    }
-    else{ 
-        document.getElementById('listaHeader').style.visibility = "hidden";
-        document.getElementById('cancel').style.display = "none";
-        document.getElementById('opc').style.display = "block";
-    }
+    if(window.innerWidth>=1200){ document.getElementById('listaHeader').style.visibility = "visible"; }
+    else{ opciones(); }
 };
 /*Función para la visibilidad de las secciones CRUD*/
 function seccionCrud( opcion ){
