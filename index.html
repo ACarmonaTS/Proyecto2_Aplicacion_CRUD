@@ -18,8 +18,7 @@
             <li id="search" onclick="seccionCrud('searchV');"><a><img src="assets/00 buscar.gif" alt="AGREGAR">&nbsp;BUSCAR</a></li>
             <li id="edit" onclick="seccionCrud('editV');"><a><img src="assets/00 editar.gif" alt="AGREGAR">&nbsp;EDITAR</a></li>
             <li id="delete" onclick="seccionCrud('deleteV');"><a><img src="assets/00 eliminar.gif" alt="AGREGAR">&nbsp;ELIMINAR</a></li>
-            <li id="read" onclick="seccionCrud('readV');"><a><img src="assets/00 archivo.gif" alt="AGREGAR">&nbsp;ARCHIVO</a></li>
-            <!--<li id="cSesion"><a href="">CERRAR SESIÓN</a></li>-->
+            <li id="read" onclick="seccionCrud('readV');"><a><img src="assets/00 archivo.gif" alt="AGREGAR">&nbsp;LEER</a></li>
         </ul>
          <div id="opciones">
             <img onclick="cancelar();" id="opc" src="assets/00 opciones.gif" alt="OPCIONES">
@@ -36,13 +35,13 @@
                         <div class="datosAdd">
                             <div>
                                 <label for="ctaInput" class="descInput">Nombre&nbsp;
-                                    <input type="text" name="ctaInput" id="nameAdd" value="" maxlength="25" autocomplete="off">
+                                    <input onchange="makeId();" type="text" name="ctaInput" id="nameAdd" value="" maxlength="25" autocomplete="off">
                                 </label>
                                 <label for="ctaInput" class="descInput">Caterogía&nbsp;
                                     <input type="text" name="ctaInput" id="catAdd" value="" maxlength="25" autocomplete="off">
                                 </label>
                                 <label for="ctaInput" class="descInput">Clave del producto&nbsp;
-                                    <input type="text" name="ctaInput" id="claveProdAdd" value="" maxlength="25" autocomplete="off">
+                                    <input onchange="makeId();" type="text" name="ctaInput" id="claveProdAdd" value="" maxlength="25" autocomplete="off">
                                 </label>
                                 <label for="ctaInput" class="descInput">Identificador&nbsp;
                                     <input class="searchInput" type="text" name="ctaInput" id="identAdd" value="" maxlength="25" autocomplete="off" readonly="readonly">
@@ -53,10 +52,10 @@
                                     <input type="number" name="ctaInput" id="stockAdd" value=0 maxlength="10">
                                 </label>
                                 <label for="ctaInput" class="descInput">Precio de compra&nbsp;
-                                    <input type="number" name="ctaInput" id="compraAdd" value=0 maxlength="10">
+                                    <input onchange="makeGan();" type="number" name="ctaInput" id="compraAdd" value=0 maxlength="10">
                                 </label>
                                 <label for="ctaInput" class="descInput">Precio de venta&nbsp;
-                                    <input type="number" name="ctaInput" id="ventaAdd" value=0 maxlength="10">
+                                    <input onchange="makeGan();" type="number" name="ctaInput" id="ventaAdd" value=0 maxlength="10">
                                 </label>
                                 <label for="ctaInput" class="descInput">Ganancia&nbsp;
                                     <input class="searchInput" type="number" name="ctaInput" id="gananciaAdd" value=0 maxlength="10" autocomplete="off" readonly="readonly">
@@ -210,18 +209,9 @@
                 </form>
             </div>
             <div class="tableData" id="readV">
+                <p>DATOS PRINCIPALES</p>
                 <table id="tRead">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Stock</th>
-                            <th>Precio<br>Venta</th>
-                            <th>Precio<br>Compra</th>
-                            <th>Ganancia</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
+                    <!--Aquí se verán datos principales-->
                 </table>
             </div>
         </main>
@@ -229,9 +219,6 @@
     <footer class="encabezado downFooter">
         <p>SOPORTE TÉCNICO: 55 1122 3344, EXT: 555</p>
         <p>Proyecto 2 Aplicación CRUD</p>
-        <!--<ul id="listaHeader">
-            <li><a id="download" href="">DESCARGAR</a></li>
-            <li><a id="download" href="">IMPRIMIR</a></li>-->
         </ul>
     </footer>
 </body>
