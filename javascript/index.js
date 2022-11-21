@@ -35,29 +35,37 @@ function seccionCrud( opcion ){
 /*=====================================================================*/
 /*=====================================================================*/
 /* Variables */
-let lista = []; nombre = document.querySelector("[name='nameAdd']").value;
+let lista = [];
 let cont = 0;
 
 /* Función para agregar */
 function agregar(){
-    const nombre = document.querySelector("[name='nameAdd']").value;
-    const categoria = document.querySelector("[name='catAdd']").value;
-    const clave = document.querySelector("[name='nameAdd']").value;
-    const stock = document.querySelector("[name='nameAdd']").value;
-    const venta = document.querySelector("[name='nameAdd']").value;
-    const compra = document.querySelector("[name='nameAdd']").value;
-    const nombreId = nombre.charAt(0);
-    const idMaterial = nombreId + apellido + cont;
-    const contactos = {
-        id: idMaterial,
-        nombre,
-        apellido,
-        telefono,
-    };
-    agenda.push(contactos);
-    cont++;
-    document.getElementById("nombres").value = "";
-    document.getElementById("apellidos").value = "";
-    document.getElementById("telefonos").value = "";
-    document.getElementById("codigo").innerHTML = JSON.stringify(agenda, null, 3);
+    const nombre = document.getElementById('nameAdd').value;
+    const categoria = document.getElementById('catAdd').value;
+    const clave = document.getElementById('claveProdAdd').value;
+    const stock = document.getElementById('stockAdd').value;
+    const compra = document.getElementById('compraAdd').value;
+    const venta = document.getElementById('ventaAdd').value;
+    const desc = document.getElementById('descAdd').value;
+    const id = nombre.charAt(0) + clave.charAt(0) + cont;
+    const ganancia = parseFloat(venta) - parseFloat(compra);
+    const newAdd = { nombre, categoria, clave, stock, compra, venta, desc, id, ganancia, };
+    lista.push(newAdd);
+    cont++;  
+    console.log(lista);
+    document.getElementById("identAdd").value = id;
+    document.getElementById("gananciaAdd").value = parseFloat(ganancia);
+    // document.getElementById("codigo").innerHTML = JSON.stringify(agenda, null, 3);
+}
+
+function limpiar(){
+    document.getElementById('nameAdd').value = "";
+    document.getElementById('catAdd').value = "";
+    document.getElementById('claveProdAdd').value = "";
+    document.getElementById('identAdd').value = "";
+    document.getElementById('stockAdd').value = 0;
+    document.getElementById('compraAdd').value = 0;
+    document.getElementById('ventaAdd').value = 0;
+    document.getElementById('gananciaAdd').value = 0;
+    document.getElementById('descAdd').value = "";
 }

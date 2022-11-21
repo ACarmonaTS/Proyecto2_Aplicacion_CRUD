@@ -36,41 +36,41 @@
                         <div class="datosAdd">
                             <div>
                                 <label for="ctaInput" class="descInput">Nombre&nbsp;
-                                    <input type="text" id="ctaInput" name="nameAdd" value="" maxlength="25" autocomplete="off">
+                                    <input type="text" name="ctaInput" id="nameAdd" value="" maxlength="25" autocomplete="off">
                                 </label>
                                 <label for="ctaInput" class="descInput">Caterogía&nbsp;
-                                    <input type="text" id="ctaInput" name="catAdd" value="" maxlength="25" autocomplete="off">
+                                    <input type="text" name="ctaInput" id="catAdd" value="" maxlength="25" autocomplete="off">
                                 </label>
                                 <label for="ctaInput" class="descInput">Clave del producto&nbsp;
-                                    <input type="text" id="ctaInput" name="claveProdAdd" value="" maxlength="25" autocomplete="off">
+                                    <input type="text" name="ctaInput" id="claveProdAdd" value="" maxlength="25" autocomplete="off">
                                 </label>
                                 <label for="ctaInput" class="descInput">Identificador&nbsp;
-                                    <input class="searchInput" type="text" id="ctaInput" name="identAdd" value="" maxlength="25" autocomplete="off" readonly="readonly">
+                                    <input class="searchInput" type="text" name="ctaInput" id="identAdd" value="" maxlength="25" autocomplete="off" readonly="readonly">
                                 </label>
                             </div>
                             <div>
                                 <label for="ctaInput" class="descInput">Stock&nbsp;
-                                    <input type="number" id="ctaInput" name="stockAdd" value=0 maxlength="10">
+                                    <input type="number" name="ctaInput" id="stockAdd" value=0 maxlength="10">
                                 </label>
                                 <label for="ctaInput" class="descInput">Precio de compra&nbsp;
-                                    <input type="number" id="ctaInput" name="compraAdd" value=0 maxlength="10">
+                                    <input type="number" name="ctaInput" id="compraAdd" value=0 maxlength="10">
                                 </label>
                                 <label for="ctaInput" class="descInput">Precio de venta&nbsp;
-                                    <input type="number" id="ctaInput" name="ventaAdd" value=0 maxlength="10">
+                                    <input type="number" name="ctaInput" id="ventaAdd" value=0 maxlength="10">
                                 </label>
                                 <label for="ctaInput" class="descInput">Ganancia&nbsp;
-                                    <input class="searchInput" type="number" id="ctaInput" name="gananciaAdd" value=0 maxlength="10" autocomplete="off">
+                                    <input class="searchInput" type="number" name="ctaInput" id="gananciaAdd" value=0 maxlength="10" autocomplete="off" readonly="readonly">
                                 </label>
                             </div>
                         </div><br>
                         <div id="contDesc">
                             <label for="ctaInput" class="descInput descText">Descripción</label><br>
-                            <textarea id="ctaInput" name="descAdd" rows="12"></textarea>
+                            <textarea name="ctaInput" id="descAdd" rows="12"></textarea>
                         </div>
                     </fieldset>
                     <div class="contBtn">
                         <button onclick="agregar();" class="btnStyle1" type="button">AGREGAR</button>
-                        <button class="btnStyle1" type="button">LIMPIAR</button>
+                        <button onclick="limpiar()" class="btnStyle1" type="button">LIMPIAR</button>
                     </div>
                 </form>
             </div>
