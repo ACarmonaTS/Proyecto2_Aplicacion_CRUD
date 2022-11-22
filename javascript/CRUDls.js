@@ -64,6 +64,7 @@ function limpiar2(){
     document.getElementById('gananciaSearch').value = 0;
     document.getElementById('descSearch').value = "";
 }
+
 function search(){
     let busca = read();
     busca = document.getElementById('identSearch').value;
@@ -124,4 +125,60 @@ function read(){
     fila += "</tbody>";
     compList += fila;
     return compList;
+}
+
+function searchDelete(){
+    let busca = read();
+    busca = document.getElementById('identDelete').value;
+    let bandera = 0;
+    let listSearch = JSON.parse(localStorage.getItem('value')); 
+    for( let dato=0; dato<listSearch.length; dato++ ){
+        if( busca === listSearch[dato][3] )
+        {
+            document.getElementById('nameDelete').value = listSearch[dato][0];
+            document.getElementById('catDelete').value = listSearch[dato][1];
+            document.getElementById('claveProdDelete').value = listSearch[dato][2];
+            document.getElementById('stockDelete').value = listSearch[dato][4];
+            document.getElementById('compraDelete').value = listSearch[dato][5];
+            document.getElementById('ventaDelete').value = listSearch[dato][6];
+            document.getElementById('gananciaDelete').value = listSearch[dato][7];
+            document.getElementById('descDelete').value = listSearch[dato][8];
+            bandera = 1;
+        }
+    }
+    if( bandera === 0){
+        alert("El Id no existe");
+    }
+}
+
+function deleteCrud(){
+    let busca = read();
+    busca = document.getElementById('identDelete').value;
+    let bandera = 0;
+    let listSearch = JSON.parse(localStorage.getItem('value')); 
+    let newList = [];
+    console.log(listSearch);
+    for( let dato=0; dato<listSearch.length; dato++ ){
+        if( busca === listSearch[dato][3] ){ dato++; bandera = 1 }
+        if(dato===listSearch.length){ break; }
+        else{ newList.push(listSearch[dato]); }
+    }
+    if( bandera = 1 ){
+        localStorage.clear();
+        localStorage.setItem('value', JSON.stringify(newList));
+        alert("El Id ha sido eliminado con éxito");
+        limpiar3();
+    }    
+}
+
+function limpiar3(){
+    document.getElementById('nameDelete').value = "";
+    document.getElementById('catDelete').value = "";
+    document.getElementById('claveProdDelete').value = "";
+    document.getElementById('identDelete').value = "";
+    document.getElementById('stockDelete').value = 0;
+    document.getElementById('compraDelete').value = 0;
+    document.getElementById('ventaDelete').value = 0;
+    document.getElementById('gananciaDelete').value = 0;
+    document.getElementById('descDelete').value = "";
 }
