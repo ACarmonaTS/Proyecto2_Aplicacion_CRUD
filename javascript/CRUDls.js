@@ -10,6 +10,7 @@ let cont = 0;
 let nombre = categoria = clave = id = desc = "";
 let stock = venta = compra = ganancia = 0;
 let newAdd = [ nombre, categoria, clave, id, stock, compra, venta, ganancia, desc ];
+let list;
 
 /* Función para agregar */
 function create(){
@@ -51,15 +52,51 @@ function limpiar(){
     document.getElementById('gananciaAdd').value = 0;
     document.getElementById('descAdd').value = "";
 }
+
+function limpiar2(){
+    document.getElementById('nameSearch').value = "";
+    document.getElementById('catSearch').value = "";
+    document.getElementById('claveProdSearch').value = "";
+    document.getElementById('identSearch').value = "";
+    document.getElementById('stockSearch').value = 0;
+    document.getElementById('compraSearch').value = 0;
+    document.getElementById('ventaSearch').value = 0;
+    document.getElementById('gananciaSearch').value = 0;
+    document.getElementById('descSearch').value = "";
+}
+function search(){
+    let busca = read();
+    busca = document.getElementById('identSearch').value;
+    console.log(busca);
+    let bandera = 0;
+    let listSearch = JSON.parse(localStorage.getItem('value')); 
+    for( let dato=0; dato<listSearch.length; dato++ ){
+        if( busca === listSearch[dato][3] )
+        {
+            document.getElementById('nameSearch').value = listSearch[dato][0];
+            document.getElementById('catSearch').value = listSearch[dato][1];
+            document.getElementById('claveProdSearch').value = listSearch[dato][2];
+            document.getElementById('stockSearch').value = listSearch[dato][4];
+            document.getElementById('compraSearch').value = listSearch[dato][5];
+            document.getElementById('ventaSearch').value = listSearch[dato][6];
+            document.getElementById('gananciaSearch').value = listSearch[dato][7];
+            document.getElementById('descSearch').value = listSearch[dato][8];
+            bandera = 1;
+        }
+    }
+    if( bandera === 0){
+        alert("El Id no existe");
+    }
+}
+
 /*Muestreo en tabla de datos principales*/
 function read(){
-    let list = JSON.parse(localStorage.getItem('value')); 
-    console.log(list);
+    list = JSON.parse(localStorage.getItem('value')); 
     let compList = "<thead><tr><th>ID</th><th>Nombre</th><th>Stock</th><th>Precio<br>Venta</th><th>Precio<br>Compra</th><th>Ganancia</th></tr></thead><tbody>";
     let fila = "";
     for( let dato=0; dato<list.length; dato++ ){
         fila += "<tr><td>";
-        fila += list[dato][0];
+        fila += list[dato][3];
         fila += "</td>";
 
         fila += "<td>";
