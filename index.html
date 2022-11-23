@@ -9,16 +9,16 @@
     <link rel="stylesheet" media="(min-width: 1200px)" href="styles/desktop.css">
     <link rel="stylesheet" media="(max-width: 1199px)" href="styles/max1199.css">
     <script src="javascript/index.js"></script>
-    <script src="javascript/CRUDls.js"></script>
+    <script src="javascript/CRUD-S.js"></script>
 </head>
 <body>
     <header class="encabezado">
         <a href="index.html"><h1 id="titlePage">DEVENDRA&nbsp;</h1></a>
         <ul id="listaHeader">
-            <li id="add" onclick="seccionCrud('addV');"><a><img src="assets/00 agregar.gif" alt="AGREGAR">&nbsp;AGREGAR</a></li>
-            <li id="search" onclick="seccionCrud('searchV');"><a><img src="assets/00 buscar.gif" alt="AGREGAR">&nbsp;BUSCAR</a></li>
-            <li id="edit" onclick="seccionCrud('editV');"><a><img src="assets/00 editar.gif" alt="AGREGAR">&nbsp;EDITAR</a></li>
-            <li id="delete" onclick="seccionCrud('deleteV');"><a><img src="assets/00 eliminar.gif" alt="AGREGAR">&nbsp;ELIMINAR</a></li>
+            <li id="add" onclick="seccionCrud('addV'); limpiar();"><a><img src="assets/00 agregar.gif" alt="AGREGAR">&nbsp;AGREGAR</a></li>
+            <li id="search" onclick="seccionCrud('searchV'); limpiar2();"><a><img src="assets/00 buscar.gif" alt="AGREGAR">&nbsp;BUSCAR</a></li>
+            <li id="edit" onclick="seccionCrud('editV'); limpiar4();"><a><img src="assets/00 editar.gif" alt="AGREGAR">&nbsp;EDITAR</a></li>
+            <li id="delete" onclick="seccionCrud('deleteV'); limpiar3();"><a><img src="assets/00 eliminar.gif" alt="AGREGAR">&nbsp;ELIMINAR</a></li>
             <li id="read" onclick="seccionCrud('readV');"><a><img src="assets/00 archivo.gif" alt="AGREGAR">&nbsp;LEER</a></li>
         </ul>
          <div id="opciones">
@@ -126,42 +126,42 @@
                         <div class="datosAdd">
                             <div>
                                 <label for="ctaInput" class="descInput">Identificador&nbsp;
-                                    <input type="text" name="ctaInput" id="identEdit" value="" maxlength="25" autocomplete="off">
+                                    <input onchange="makeIdEdit();" type="text" name="ctaInput" id="identEdit" value="" maxlength="25" autocomplete="off">
                                 </label>
                                 <label for="ctaInput" class="descInput">Nombre&nbsp;
-                                    <input class="searchInput" type="text"named="ctaInput" id="nameEdit" value="" maxlength="25" autocomplete="off" readonly="readonly">
+                                    <input type="text"named="ctaInput" id="nameEdit" value="" maxlength="25" autocomplete="off">
                                 </label>
                                 <label for="ctaInput" class="descInput">Caterogía&nbsp;
-                                    <input type="text" name="ctaInput" id="catEdit" value="" maxlength="25" autocomplete="off" readonly="readonly">
+                                    <input type="text" name="ctaInput" id="catEdit" value="" maxlength="25" autocomplete="off">
                                 </label>
                                 <label for="ctaInput" class="descInput">Clave del producto&nbsp;
-                                    <input class="searchInput" type="text" name="ctaInput" id="claveProdEdit" value="" maxlength="25" autocomplete="off" readonly="readonly">
+                                    <input type="text" name="ctaInput" id="claveProdEdit" value="" maxlength="25" autocomplete="off">
                                 </label>
                             </div>
                             <div>
                                 <label for="ctaInput" class="descInput">Stock&nbsp;
-                                    <input type="number" name="ctaInput" id="stockEdit" value=0 maxlength="10" readonly="readonly">
+                                    <input type="number" name="ctaInput" id="stockEdit" value=0 maxlength="10">
                                 </label>
                                 <label for="ctaInput" class="descInput">Precio de compra&nbsp;
-                                    <input type="number" name="ctaInput" id="compraEdit" value=0 maxlength="10" readonly="readonly">
+                                    <input type="number" name="ctaInput" id="compraEdit" value=0 maxlength="10">
                                 </label>
                                 <label for="ctaInput" class="descInput">Precio de venta&nbsp;
-                                    <input type="number" name="ctaInput" id="ventaEdit" value=0 maxlength="10" readonly="readonly">
+                                    <input type="number" name="ctaInput" id="ventaEdit" value=0 maxlength="10">
                                 </label>
                                 <label for="ctaInput" class="descInput">Ganancia&nbsp;
-                                    <input class="searchInput" type="number" name="ctaInput" id="gananciaEdit" value=0 maxlength="10" autocomplete="off" readonly="readonly">
+                                    <input onchange="makeGanEdit();" readonly class="searchInput" type="number" name="ctaInput" id="gananciaEdit" value=0 maxlength="10" autocomplete="off">
                                 </label>
                             </div>
                         </div><br>
                         <div id="contDesc">
                             <label for="ctaInput" class="descInput descText">Descripción</label><br>
-                            <textarea name="ctaInput" id="descEdit" rows="12" readonly="readonly"></textarea>
+                            <textarea name="ctaInput" id="descEdit" rows="12"></textarea>
                         </div>
                     </fieldset>
                     <div class="contBtn">
-                        <button class="btnStyle1" type="button">BUSCAR</button>
-                        <button class="btnStyle1" type="button">EDITAR</button>
-                        <button class="btnStyle1" type="button">LIMPIAR</button>
+                        <button onclick="searchEdit();" class="btnStyle1" type="button">BUSCAR</button>
+                        <button onclick="edit();" class="btnStyle1" type="button">EDITAR</button>
+                        <button onclick="limpiar4();" class="btnStyle1" type="button">LIMPIAR</button>
                     </div>
                 </form>
             </div>
