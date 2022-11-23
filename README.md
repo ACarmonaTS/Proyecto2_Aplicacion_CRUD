@@ -1,6 +1,15 @@
-# Proyecto 2 Aplicación CRUD
+# Proyecto 2 Aplicación CRUD (Versión 1)
+****
 
-## Descripción: 
+
+## **ÍNDICE**
+
+* [1. Descripción](#1-descripción)
+* [2. Evaluación](#2-evaluación)
+
+---
+# 1. Descripción: 
+
 #### Simulación de sistema de inventario CRUD (Create, Read, Update, Delete) (Crear, Leer, Actualizar y Eliminar) y sección de búsqueda. Todos los datos se almacenarán en el localStorage del navegador, por lo que no se perderán si se cierra.
 ![](assets/README%2000.png)
 
@@ -50,3 +59,13 @@
 #### Mayor o igual a 1200px
 
 ![Alt text](assets/README%2001.png)
+
+# 2. Evaluación
+
+| ÁREA       | % DEL TOTAL |
+| ------------- |:-------------:|
+| UI      | 20%     |
+| JAVASCRIPT      | 40%     |
+| CONTROL DE VERSIONES      | 15%     |
+| DESPLIEGUE | 15%      |
+| ENTREGA A TIEMPO | 10%      |
