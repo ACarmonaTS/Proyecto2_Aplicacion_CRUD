@@ -24,7 +24,7 @@ function create(){
         lista.push(newAdd);
         localStorage.setItem('value', JSON.stringify(lista));
         cont++;
-        limpiar();
+        limpiar(); //Limpiar después de crear
     }
 }
 /*Esta función crea el Id y lo muestra*/
