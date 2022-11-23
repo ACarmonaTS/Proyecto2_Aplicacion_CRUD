@@ -16,7 +16,7 @@
     z-index: 1;
 }
 /*Eliminamos la decoración del link*/
-a{ text-decoration: none; color: black; }
+a{ text-decoration: none; color: black; cursor: pointer; }
 /*El titulo del encabezado se quedará del lado izquierdo*/
 #titlePage{ margin-left: 10px; font-size: 28px; }
 /*Propiedades del contenedor de la lista*/
@@ -41,7 +41,7 @@ li{ width: 100%; display: flex; justify-content: center; list-style: none; font:
 /*Tamaño de las imagenes del encabezado*/
 header img{ width: 18px; }
 /*Tamaño de las imagenes de las opciones del encabezado*/
-#opciones{ position: fixed; right: 20px; width: 40px; }
+#opciones{ position: fixed; right: 20px; width: 40px; cursor: pointer; }
 /*Ver solo el ícono opciones desde el principio*/
 #opc{ display: block; }
 /*Dejar invisible el ícono "cancelar" desde el princi*/

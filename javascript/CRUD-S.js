@@ -185,6 +185,7 @@ function searchEdit(){
     }
     if( bandera === 0){
         alert("El Id no existe");
+        limpiar4();
     }
 }
 /*=====================================================================*/
